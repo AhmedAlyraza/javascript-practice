@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Sets a default font */
+  line-height: 1.6; /* Sets a default line height for readability */
+  background-color: #121a18; /* Sets a default background color */
+  color: #ffffff; /* Sets a default text color */
+}
+.container .row {
+  padding: 30px 0px;
+}
+/* main heading style */
+.main-heading {
+  text-align: center;
+}
+.bg-image {
+  cursor: pointer; /* Show pointer on hover */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #ddd;
+  padding: 5px;
+  opacity: 0.5;
+  object-fit: cover;
+}
+
+.bg-image:hover{
+  opacity: 1.0;
+  transform: scaleX(-1);
+}
+
+#click-popup {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+  z-index: 9999; /* Ensure it's on top of other elements */
+  padding: 30px; /* Add padding if needed */
+  box-sizing: border-box; /* Ensure padding is included in size calculations */
+}
+
+#click-popup img {
+  margin: 10px;
+}
+
+#popup-images {
+  height: auto; /* Adjust as needed */
+  width: auto; /* Adjust as needed */
+  max-height: 80vh; /* Ensures image doesn't exceed viewport height */
+  max-width: 80vw; /* Ensures image doesn't exceed viewport width */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow for better visibility */
+}
+
+#crossbtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+#left-arrow,
+#right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+#left-arrow {
+  left: 50px; /* Positioning from the left */
+  width: 40px;
+  height: 40px;
+}
+
+#right-arrow {
+  right: 50px; /* Positioning from the right */
+  width: 40px;
+  height: 40px;
+}
+
+/* Lightbox styles */
+.lightbox-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.lightbox-popup img {
+  margin: 10px;
+}
+
+.lightbox-image {
+  max-height: 80vh;
+  max-width: 80vw;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.lightbox-zoom {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.lightbox-arrow-left {
+  left: 50px;
+}
+
+.lightbox-arrow-right {
+  right: 50px;
+}
+
+.lightbox-loading {
+  color: white;
+  font-size: 18px;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}

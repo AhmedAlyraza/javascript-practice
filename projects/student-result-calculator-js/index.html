@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 class="heading">Test Grade Calculator</h2>
+
+    <div class="input-section">
+        <input type="text" id="subject" placeholder="Subject Name">
+        <input type="number" id="obtained" placeholder="Obtained Marks">
+        <input type="number" id="total" placeholder="Total Marks">
+        <button onclick="addResult()" class="addBtn">Add</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Subject Name</th>
+                <th>Obtained</th>
+                <th>Total</th>
+                <th>Percentage</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody id="resultBody">
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">Grand Total</th>
+                <th id="grandObtained">0</th>
+                <th id="grandTotal">0</th>
+                <th id="grandPercentage">0%</th>
+                <th id="grandGrade">-</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

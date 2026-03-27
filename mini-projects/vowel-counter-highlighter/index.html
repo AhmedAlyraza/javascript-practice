@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vowel Counter & Highlighter App</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <h1>Vowel Analyzer</h1>
+    <p class="subtitle">Type text and instantly analyze vowels</p>
+
+    <div class="input-area">
+        <input id="input-text-field" oninput="showText()" type="text" placeholder="Enter your text here...">
+        <button onclick="submitText()">Analyze</button>
+    </div>
+
+    <div class="preview-box">
+        <h3>Preview</h3>
+        <p id="text"></p>
+    </div>
+
+    <div class="result-box">
+        <h3>Vowel Count</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Vowel</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+
+            <tbody id="vowelTableBody"></tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

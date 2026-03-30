@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Analyzer App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Marks Analyzer App</h2>
+
+        <input type="number" id="marksInput" placeholder="Enter marks">
+        <br>
+        <button onclick="addMarks()">Add</button>
+        <button onclick="calculateAverage()">Calculate</button>
+
+        <h3>Marks List</h3>
+
+        <table border="1" width="100%" id="marksTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+
+            <tbody id="marksBody">
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th id="totalCell">0</th>
+                </tr>
+                <tr>
+                    <th>Average</th>
+                    <th id="averageCell">0</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
